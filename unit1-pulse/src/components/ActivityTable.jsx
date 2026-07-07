@@ -32,11 +32,11 @@ function ActivityTable() {
           </span>
         </div>
         <div className="pagination-controls">
-          <button> $lt; </button>
+          <button> &lt;&lt; </button>
           <button> 1 </button>
           <button> 2 </button>
           <button> 3 </button>
-          <button> $gt; </button>
+          <button> &gt;&gt; </button>
         </div>
       </div>
       <div className="activity-table">
