@@ -1,8 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import NavBar from "./NavBar";
-import "../styles/Layout.css";
-function Layout() {
+ function Layout() {
   return (
     <div className="app-container">
       {/* The header scetion */}
