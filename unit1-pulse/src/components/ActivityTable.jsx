@@ -1,41 +1,25 @@
-function ActivityTable() {
-  const activities = [
-    {
-      id: 1,
-      date: "2026-06-20",
-      activity: "Running",
-      duration: "1 hour",
-      score: 8,
-    },
-    {
-      id: 2,
-      date: "2026-06-21",
-      activity: "Walking",
-      duration: "30 mts",
-      score: 7,
-    },
-    {
-      id: 1,
-      date: "2026-06-20",
-      activity: "Meditation",
-      duration: "30 mts",
-      score: 7,
-    },
-  ];
+function ActivityTable({ activities, onDeleteActivity }) {
+  //  id: 1,
+  //     date: "2026-06-20",
+  //     activity: "Running",
+  //     duration: "1 hour",
+  //     score: 8,
+  //     water: 2500,
+  //     sleep: 7,
   return (
     <div className="activity-table-container">
       <div className="table-footer">
         <div className="footer">
           <span className="pagination-text">
             {" "}
-            Showing 1 to 5 of 10 activities
+            Showing 1 to {activities.length} of {activities.length} activities
           </span>
         </div>
         <div className="pagination-controls">
           <button> &lt;&lt; </button>
-          <button> 1 </button>
-          <button> 2 </button>
-          <button> 3 </button>
+          {activities.map((activities, index) => (
+            <button key={index}>{index + 1} </button>
+          ))}
           <button> &gt;&gt; </button>
         </div>
       </div>
@@ -44,22 +28,45 @@ function ActivityTable() {
         <div className="table-row table-header">
           <div className="col-date"> Date</div>
           <div className="col-activity">Activity</div>
+          <div className="col-type">Type</div>
           <div className="col-duration">Duration</div>
+          <div className="col-duration">score</div>
+          <div className="col-duration">water</div>
+          <div className="col-duration">sleep</div>
           <div className="col-actions">Actions</div>
         </div>
         {/* Rows*/}
-        {activities.map((activity) => (
-          <div className="row" key={activity.id}>
-            <div className="col-date">{activity.date} </div>
-            <div className="col-activity">{activity.activity} </div>
-            <div className="col-duration">{activity.duration} </div>
-            <div className="col-score">{activity.score} </div>
-            <div className="col-actopms">
-              <button className="btn edit-btn">Edit</button>
-              <button className="btn delete-btn">Delete</button>
+        {activities.length === 0 ? (
+          <div className="empty-row"> No Activities logged </div>
+        ) : (
+          activities.map((activity) => (
+            <div className="row" key={activity.id}>
+              <div className="col-date">{activity.date} </div>
+              <div className="col-activity">{activity.activity} </div>
+              <div className="col-duration">{activity.activityType} </div>
+
+              <div className="col-duration">{activity.duration} </div>
+ 
+              <div className="col-score">{activity.score} </div>
+              <div className="col-score">{activity.water} </div>
+              <div className="col-score">{activity.sleep} </div>
+              <div className="col-actopms">
+                <button
+                  className="btn edit-btn"
+                  onClick={() => console.log(`Editing ${activity.id}`)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn delete-btn"
+                  onClick={() => onDeleteActivity(activity.id)}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );
