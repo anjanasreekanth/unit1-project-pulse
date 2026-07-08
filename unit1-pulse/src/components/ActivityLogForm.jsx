@@ -67,7 +67,7 @@ function ActivityLogForm({ onAddActivity }) {
         </div>
         {/* Field 3 -> Activity Type */}
         <div className="form-field full-width">
-          <label htmlFor="activity-type"> Activity Type: </label>
+          <label htmlFor="activityType"> Activity Type: </label>
           <select
             id="activityType"
             className="input-field"
@@ -78,7 +78,7 @@ function ActivityLogForm({ onAddActivity }) {
             <option>Strength</option>
           </select>
         </div>
-        <div className="form-field full-width water-field">
+        <div className="form-field full-width duration-field">
           <label htmlFor="duration"> Duration (mts30): </label>
           <input
             type="number"
@@ -86,7 +86,6 @@ function ActivityLogForm({ onAddActivity }) {
             className="input-field water-input"
             onChange={handleChange}
           />
-          
         </div>
         {/* separator line */}
         <div className="separator"></div>

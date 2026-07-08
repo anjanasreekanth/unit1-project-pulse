@@ -10,7 +10,7 @@ function DashboardPage() {
       id: 1,
       date: "2026-06-20",
       activity: "Running",
-      duration: "1 hour",
+      duration: "60 mts",
       score: 8,
       water: 2500,
       sleep: 7,
@@ -44,7 +44,7 @@ function DashboardPage() {
       score: Math.floor(Math.random() * 10) + 5, // mock score generateor
     };
 
-    // update the sate
+    // update the state
     setActivities([...activities, newActivityData]);
     alert("Activity Log Added!");
   };
@@ -59,6 +59,13 @@ function DashboardPage() {
     alert("Activity Deleted!");
   };
 
+  //streak - mock based on number of activities
+  const calculateStreak = (activityCount) => {
+    if (activityCount < 3) return 3;
+    if (activityCount < 10) return 7;
+    return 14; // if 10+ then 14 days streak
+  };
+
   return (
     <div className="dashboard-grid">
       {/** left column */}
@@ -67,9 +74,9 @@ function DashboardPage() {
       </div>
       {/** right column */}
       <div className="dashboard-column right-column">
-        <AverageScoreCard />
+        <AverageScoreCard activities={activities} />
         <div className="streak-card">
-          <StreakCard />
+          <StreakCard streakValue={calculateStreak(activities.length)} />
         </div>
         <div className="activity-table-container">
           <ActivityTable
