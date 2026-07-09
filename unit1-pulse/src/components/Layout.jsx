@@ -1,13 +1,16 @@
 import { Outlet } from "react-router-dom";
 
 import NavBar from "./NavBar";
- function Layout() {
+function Layout() {
   return (
     <div className="app-container">
       {/* The header scetion */}
       <header className="app-header">
-        <h1 className="logo">PULSE</h1>
-        <NavBar /> {/*navigation bar */}
+        <a href="/" className="logo">
+          <img src="/logo.svg" alt="Pulse" />
+        </a>
+
+        <NavBar />
       </header>
 
       {/* main content area */}
