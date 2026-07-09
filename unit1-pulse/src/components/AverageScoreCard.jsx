@@ -35,7 +35,7 @@ function AverageScoreCard({ activities }) {
           {/**value display  */}
           <div className="activity-graph-container">
             <div className="progress-bar">
-              <div className="progress-lable">Progress</div>
+              {/* <div className="progress-label">Progress</div> */}
               <div className="progress-value">{progressPercentage} %</div>
             </div>
           </div>

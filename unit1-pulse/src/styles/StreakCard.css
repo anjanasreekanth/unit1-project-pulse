@@ -1,0 +1,52 @@
+.streak-card {
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px #69dec4;
+  
+}
+
+.streak-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.streak-value {
+  font-size: 4em;
+  font-weight: 700;
+  color: #69dec4;
+}
+
+.streak-subtext {
+  font-size: 4em;
+  font-weight: 700;
+  color: #69dec4;
+}
+.icon {
+  font-size: 4em;
+}
+.motivational-text {
+  font-size: 1.5em;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.btn{
+  background-color: white;
+  border: none;
+  color: #555;
+  cursor: grab;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: .9em;
+  
+}
+.edit-btn{
+  color: blue;
+
+}
+.delete-btn{
+  color: red;
+}

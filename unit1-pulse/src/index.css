@@ -1,3 +1,7 @@
 @import url("../src/styles/Layout.css");
 @import url("../src/styles/NavBar.css");
 @import url("../src/styles/ActivityLogForm.css");
+@import url("../src/styles/AverageScoreCard.css");
+@import url("../src/styles/StreakCard.css");
+@import url("../src/styles/ActivityTable.css");
+@import url("../src/styles/DashboardPage.css");

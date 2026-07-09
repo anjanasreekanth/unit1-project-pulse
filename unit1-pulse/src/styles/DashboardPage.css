@@ -1,0 +1,47 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+}
+.dashboard-column {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px black;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.left-column {
+  width: auto;
+}
+.card-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+.streak-card {
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+@media (maxwidth: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .dashboard-column {
+    padding: 15px;
+  }
+  .left-column {
+    width: 100%;
+  }
+  
+  .card-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
