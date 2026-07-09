@@ -11,6 +11,7 @@ function DashboardPage() {
       date: "2026-06-20",
       activity: "Running",
       duration: "60 mts",
+      activityType: "cardio",
       score: 8,
       water: 2500,
       sleep: 7,
@@ -19,6 +20,7 @@ function DashboardPage() {
       id: 2,
       date: "2026-06-21",
       activity: "Walking",
+      activityType: "cardio",
       duration: "30 mts",
       score: 7,
       water: 1800,
@@ -29,6 +31,8 @@ function DashboardPage() {
       date: "2026-06-22",
       activity: "Meditation",
       duration: "30 mts",
+      activityType: "mindfulness",
+      
       score: 7,
       water: 2000,
       sleep: 7,
@@ -74,9 +78,11 @@ function DashboardPage() {
       </div>
       {/** right column */}
       <div className="dashboard-column right-column">
+           <div className="card-row"> 
         <AverageScoreCard activities={activities} />
         <div className="streak-card">
           <StreakCard streakValue={calculateStreak(activities.length)} />
+        </div>
         </div>
         <div className="activity-table-container">
           <ActivityTable

@@ -23,6 +23,7 @@ function ActivityTable({ activities, onDeleteActivity }) {
           <button> &gt;&gt; </button>
         </div>
       </div>
+
       <div className="activity-table">
         {/**Header  */}
         <div className="table-row table-header">
@@ -30,7 +31,7 @@ function ActivityTable({ activities, onDeleteActivity }) {
           <div className="col-activity">Activity</div>
           <div className="col-type">Type</div>
           <div className="col-duration">Duration</div>
-          <div className="col-duration">score</div>
+          <div className="col-score">score</div>
           <div className="col-duration">water</div>
           <div className="col-duration">sleep</div>
           <div className="col-actions">Actions</div>
@@ -40,17 +41,17 @@ function ActivityTable({ activities, onDeleteActivity }) {
           <div className="empty-row"> No Activities logged </div>
         ) : (
           activities.map((activity) => (
-            <div className="row" key={activity.id}>
-              <div className="col-date">{activity.date} </div>
+            <div className="table-row " key={activity.id}>
+              <div lassName="col-date">{activity.date} </div>
               <div className="col-activity">{activity.activity} </div>
-              <div className="col-duration">{activity.activityType} </div>
+              <div className="col-type">{activity.activityType} </div>
 
               <div className="col-duration">{activity.duration} </div>
- 
+
               <div className="col-score">{activity.score} </div>
-              <div className="col-score">{activity.water} </div>
-              <div className="col-score">{activity.sleep} </div>
-              <div className="col-actopms">
+              <div className="col-duration">{activity.water} </div>
+              <div className="col-duration">{activity.sleep} </div>
+              <div className="col-actions">
                 <button
                   className="btn edit-btn"
                   onClick={() => console.log(`Editing ${activity.id}`)}

@@ -16,14 +16,14 @@ function ActivityLogForm({ onAddActivity }) {
     // 3.   pass back the collected data to parent page
     onAddActivity(formState);
     // clear the form after submission
-    setFormState({
+   /* setFormState({
       date: "",
       activity: "",
       activityType: "",
       duration: "",
       water: 0,
       sleep: 0,
-    });
+    });*/
   };
 
   // 4.
@@ -76,10 +76,11 @@ function ActivityLogForm({ onAddActivity }) {
             <option value="">Select Type</option>
             <option>Cardio</option>
             <option>Strength</option>
+            <option>mindfulness</option>
           </select>
         </div>
         <div className="form-field full-width duration-field">
-          <label htmlFor="duration"> Duration (mts30): </label>
+          <label htmlFor="duration"> Duration (minutes 30): </label>
           <input
             type="number"
             id="duration"
@@ -90,8 +91,8 @@ function ActivityLogForm({ onAddActivity }) {
         {/* separator line */}
         <div className="separator"></div>
         {/* Field 5 & Field 6*/}
-        <div className="form-row full-width water-sleep-row">
-          <label htmlFor="water"> Water: </label>
+        <div className="form-field full-width water-sleep-row">
+          <label htmlFor="water"> Water (Litres): </label>
           <input
             type="number"
             id="water"
