@@ -90,7 +90,7 @@ function ActivityLogForm({ onAddActivity }) {
         {/* separator line */}
         <div className="separator"></div>
         {/* Field 5 & Field 6*/}
-        <div className="form-field full-width water-field">
+        <div className="form-row full-width water-sleep-row">
           <label htmlFor="water"> Water: </label>
           <input
             type="number"

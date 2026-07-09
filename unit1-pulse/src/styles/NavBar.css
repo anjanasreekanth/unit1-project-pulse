@@ -1,0 +1,44 @@
+.navigation-links {
+  display: flex;
+  gap: 25px;
+  padding-top: 10px;
+}
+
+.navigation-item {
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+  padding: 20px 10px;
+  border-bottom: 2px solid transparent;
+  cursor: grab;
+}
+
+.navigation-item:hover {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.navigation-item.active-link {
+  color: green;
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 768px) {
+    .app-header{
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+    .logo{
+        margin-bottom: 15px;
+    }
+    .navigation-links{
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .navigation-links{
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+}
