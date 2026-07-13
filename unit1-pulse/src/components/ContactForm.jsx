@@ -31,7 +31,7 @@ function ContactForm(){
             <input id="contact-email" name="email" type="email" value={formValues.email} onChange={handleChange} required />
 
             <label htmlFor="contact-message">Message</label>
-            <input id="contact-message" name="message" rows="4" value={formValues.message} onChange={handleChange} required />
+            <textarea id="contact-message" name="message" rows="4" value={formValues.message} onChange={handleChange} required />
 
             <Button className="contact-submit" type="submit">Send Message</Button>
             {isSubmitted && <p className="contact-successs">Thank you! Your message has been received.</p>}

@@ -1,7 +1,7 @@
 const benefits = [
     {icon: "✓", title: "Track", text:"Log activity, water, sleep and mindfulness." },
-    {icon: "↗", title: "Track", text:"Log activity, water, sleep and mindfulness." },
-    {icon: "*", title: "Track", text:"Log activity, water, sleep and mindfulness." }
+    {icon: "↗", title: "Analyze", text:"See your average score and weekly progress." },
+    {icon: "*", title: "Improve", text:"Build consistent habits one day at a time." }
 ];
 
 function AboutOverview(){

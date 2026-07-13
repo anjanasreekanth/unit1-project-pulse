@@ -8,7 +8,7 @@ function AboutPage(){
             <div className="about-heading">
                 <p className="about-label">ABOUT PULSE</p>
                 <h1>Small steps. Healthier habits</h1>
-                <p>
+                <p className="mini-header">
                     Pulse makes it simple to understand your daily 
                     wellness activities and celebrate your progress.
                 </p>
