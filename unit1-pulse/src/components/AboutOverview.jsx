@@ -16,7 +16,7 @@ function AboutOverview(){
             <div className="benefits-list">
                 {benefits.map((benefit)=>(
                 <div className="benefit" key={benefits.title}>
-                    <span className="benefit-icon" aria-hidden="true">{benefit.icon}</span>
+                    <span className="benefit-icon">{benefit.icon}</span>
                     <div>
                         <h3>{benefit.title}</h3>
                         <p>{benefit.text}</p>

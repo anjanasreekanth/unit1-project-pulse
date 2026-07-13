@@ -1,9 +1,19 @@
 
-
+import { Link } from "react-router-dom";
 
 function AboutBanner(){
     return(
-        <p>About</p>
+        <section className="about-banner">
+            <div className="banner-visual">
+                <span>♥</span>
+                <span className="pulse-line">⚡</span>
+            </div>
+            <div className="banner-copy">
+                <h2>Your wellness journey starts today</h2>
+                <p>Track what matters, notice your progress, and keep moving forward.</p>
+            </div>
+            <Link className="banner-link" to="/dashboard">Go to Dashboard</Link>
+        </section>
     )
 }
 
