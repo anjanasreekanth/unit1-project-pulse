@@ -16,14 +16,14 @@ function ActivityLogForm({ onAddActivity }) {
     // 3.   pass back the collected data to parent page
     onAddActivity(formState);
     // clear the form after submission
-   /* setFormState({
+   setFormState({
       date: "",
       activity: "",
       activityType: "",
-      duration: "",
+      duration: 0,
       water: 0,
       sleep: 0,
-    });*/
+    });
   };
 
   // 4.
@@ -51,6 +51,7 @@ function ActivityLogForm({ onAddActivity }) {
           <input
             type="date"
             id="date"
+            value={formState.date}
             className="input-field"
             onChange={handleChange}
           />
@@ -58,7 +59,7 @@ function ActivityLogForm({ onAddActivity }) {
         {/* Field 2 -> Activity */}
         <div className="form-field full-width">
           <label htmlFor="activity"> Activity: </label>
-          <select id="activity" className="input-field" onChange={handleChange}>
+          <select id="activity" className="input-field" value={formState.activity} onChange={handleChange}>
             <option value="">Select An Activity</option>
             <option>Running</option>
             <option>Walking</option>
@@ -71,6 +72,7 @@ function ActivityLogForm({ onAddActivity }) {
           <select
             id="activityType"
             className="input-field"
+            value={formState.activityType}
             onChange={handleChange}
           >
             <option value="">Select Type</option>
@@ -84,6 +86,7 @@ function ActivityLogForm({ onAddActivity }) {
           <input
             type="number"
             id="duration"
+            value={formState.duration}
             className="input-field water-input"
             onChange={handleChange}
           />
@@ -96,6 +99,7 @@ function ActivityLogForm({ onAddActivity }) {
           <input
             type="number"
             id="water"
+            value={formState.water} 
             className="input-field water-input"
             onChange={handleChange}
           />
@@ -105,6 +109,7 @@ function ActivityLogForm({ onAddActivity }) {
           <input
             type="number"
             id="sleep"
+            value={formState.sleep}
             className="input-field sleep-input"
             onChange={handleChange}
           />
