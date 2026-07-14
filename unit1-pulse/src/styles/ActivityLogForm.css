@@ -1,56 +1,42 @@
-.activity-form-container h3 {
-  margin-bottom: 25px;
-}
-
 .form-title {
-  color: #3333;
-
-  margin-bottom: 25px;
+  color: #25483e;
+  font-size: 1.3rem;
 }
 
 .form-field {
   display: block;
-  margin-bottom: 20px;
-}
-
-.full-width {
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .form-field label {
-  font-size: 0.85em;
-  color: #777;
-  margin-bottom: 5px;
   display: block;
+  margin-bottom: 0.4rem;
+  color: #536b64;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-.input-field{
-    padding: 10px;
-    border: 1px solid #ddd;
-    width: 100%;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-.separator{
-    height: 1px;
-    background-color: #777;
-    margin: 20px 0;
+.input-field {
+ width: 100%;
+ min-height: 44px;
+ padding: .45rem .65rem;
+ border: 1px solid #cddbd6;
+ border-radius: 8px;
+ background: white;
+ color: #263238;
 }
 
-.form-row{
-    margin-bottom: 25px;
+.input-field:focus{
+  border-color: #167c62;
 }
-.water-sleep-row .form-field{
-    display: flex;
-    gap: 20px
+
+.separator {
+  height: 1px;
+  background: #e1ebe7;
+  margin: 1.25rem 0;
 }
- 
-.water-input, .sleep-input{
-flex: 1
-}
-.full-width-button{
-    width: 100%;
-    margin-top: 20px;
-    vertical-align: center;
-     
+
+.full-width-button {
+  width: 100%;
+  margin-top: 0.5rem;
 }

@@ -16,7 +16,7 @@ function ActivityLogForm({ onAddActivity }) {
     // 3.   pass back the collected data to parent page
     onAddActivity(formState);
     // clear the form after submission
-   setFormState({
+    setFormState({
       date: "",
       activity: "",
       activityType: "",
@@ -54,12 +54,19 @@ function ActivityLogForm({ onAddActivity }) {
             value={formState.date}
             className="input-field"
             onChange={handleChange}
+            required
           />
         </div>
         {/* Field 2 -> Activity */}
         <div className="form-field full-width">
           <label htmlFor="activity"> Activity: </label>
-          <select id="activity" className="input-field" value={formState.activity} onChange={handleChange}>
+          <select
+            id="activity"
+            className="input-field"
+            value={formState.activity}
+            onChange={handleChange}
+            required
+          >
             <option value="">Select An Activity</option>
             <option>Running</option>
             <option>Walking</option>
@@ -74,6 +81,7 @@ function ActivityLogForm({ onAddActivity }) {
             className="input-field"
             value={formState.activityType}
             onChange={handleChange}
+            required
           >
             <option value="">Select Type</option>
             <option>Cardio</option>
@@ -82,26 +90,31 @@ function ActivityLogForm({ onAddActivity }) {
           </select>
         </div>
         <div className="form-field full-width duration-field">
-          <label htmlFor="duration"> Duration (minutes 30): </label>
+          <label htmlFor="duration"> Duration (minutes): </label>
           <input
             type="number"
             id="duration"
             value={formState.duration}
             className="input-field water-input"
             onChange={handleChange}
+            min="1"
+            required
           />
         </div>
         {/* separator line */}
         <div className="separator"></div>
         {/* Field 5 & Field 6*/}
         <div className="form-field full-width water-sleep-row">
-          <label htmlFor="water"> Water (Litres): </label>
+          <label htmlFor="water"> Water (ml): </label>
           <input
             type="number"
             id="water"
-            value={formState.water} 
+            value={formState.water}
             className="input-field water-input"
             onChange={handleChange}
+            min="0"
+            step="50"
+            required
           />
         </div>
         <div className="form-field full-width sleep-field">
@@ -112,6 +125,10 @@ function ActivityLogForm({ onAddActivity }) {
             value={formState.sleep}
             className="input-field sleep-input"
             onChange={handleChange}
+            min="0"
+            max="24"
+            step=".5"
+            required
           />
         </div>
         {/* Button */}

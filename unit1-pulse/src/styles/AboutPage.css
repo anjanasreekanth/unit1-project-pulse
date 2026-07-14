@@ -44,11 +44,11 @@
   color: #25483e;
 }
 
-.benefits-list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1 rem;
-    margin-top: 2rem;
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1 rem;
+  margin-top: 2rem;
 }
 
 .benefit {
@@ -193,24 +193,24 @@
   .about-card {
     padding: 1.2rem;
   }
-  .benefits-list{
+  .benefits-list {
     grid-template-columns: 1fr;
     margin-top: 1.5rem;
   }
-  .benefit{
+  .benefit {
     display: flex;
     gap: 0.75rem;
   }
-  .benefit-icon{
+  .benefit-icon {
     flex: 0 0 38px;
     margin: 0;
   }
-  .about-banner{
+  .about-banner {
     align-items: flex-start;
     flex-direction: column;
     padding: 1.25rem;
   }
-  .banner-link{
+  .banner-link {
     width: 100%;
     text-align: center;
   }
