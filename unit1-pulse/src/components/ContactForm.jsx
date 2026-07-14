@@ -34,7 +34,7 @@ function ContactForm(){
             <textarea id="contact-message" name="message" rows="4" value={formValues.message} onChange={handleChange} required />
 
             <Button className="contact-submit" type="submit">Send Message</Button>
-            {isSubmitted && <p className="contact-successs">Thank you! Your message has been received.</p>}
+            {isSubmitted && <p className="contact-success">Thank you! Your message has been received.</p>}
         </form>
        </article>
     )

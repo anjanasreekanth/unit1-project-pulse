@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
   return (
     <nav className="navigation-links">
       <Link
-        to="/"
+      
         className={`navigation-item ${currentPath === "/dashboard" ? "active-link" : ""}`}
         to="/dashboard"
       >

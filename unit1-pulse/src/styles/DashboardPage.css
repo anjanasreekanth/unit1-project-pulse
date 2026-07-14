@@ -22,7 +22,7 @@
   box-shadow: 0 6px 20px rgba(35, 100, 80, 0.1);
 }
 
-@media (maxwidth: 1000px) {
+@media (max-width: 1000px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
   }

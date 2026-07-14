@@ -47,7 +47,7 @@
 .benefits-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1 rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
@@ -85,9 +85,7 @@
 }
 
 .contact-form label {
-  margin:
-    0.75rem,
-    0 0.3rem;
+  margin:0.75rem 0 0.3rem;
   color: #476159;
   font-size: 0.85rem;
   font-weight: 700;
@@ -158,7 +156,7 @@
 }
 
 .banner-copy h2 {
-  margin: 0 0 0.25;
+  margin: 0 0 0.25rem;
   font-size: 1.35rem;
 }
 
