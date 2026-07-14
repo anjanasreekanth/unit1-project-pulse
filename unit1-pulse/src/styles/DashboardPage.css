@@ -1,47 +1,46 @@
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 30px;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  gap: 1.5rem;
 }
 .dashboard-column {
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px black;
-}
-.right-column {
   display: flex;
+  min-width: 0;
   flex-direction: column;
-  gap: 20px;
-}
-.left-column {
-  width: auto;
+  gap: 1.5rem;
 }
 .card-row {
-  display: flex;
-  gap: 20px;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
 }
-.streak-card {
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid white;
+.activity-form-container,
+.activity-table-container {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(35, 100, 80, 0.1);
 }
 
-@media (maxwidth: 1024px) {
+@media (maxwidth: 1000px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
+}
+
+@media (max-width: 650px) {
+  .dashboard-grid,
   .dashboard-column {
-    padding: 15px;
+    gap: 1rem;
   }
-  .left-column {
-    width: 100%;
-  }
-  
+
   .card-row {
-    flex-direction: column;
-    gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .activity-form-container,
+  .activity-table-container {
+    padding: 1rem;
+    border-radius: 12px;
   }
 }

@@ -9,8 +9,9 @@ function Layout() {
         <a href="/dashboard" className="logo">
           <img src="/logo.svg" alt="Pulse" />
         </a>
-
-        <NavBar />
+        <div className="header-right">
+          <NavBar />
+        </div>
       </header>
 
       {/* main content area */}

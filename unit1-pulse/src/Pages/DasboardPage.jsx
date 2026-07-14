@@ -73,23 +73,22 @@ function DashboardPage() {
   return (
     <div className="dashboard-grid">
       {/** left column */}
-      <div className="dashboard-column left-column">
+      <div className="dashboard-column">
         <ActivityLogForm onAddActivity={handleAddActivity} />
       </div>
       {/** right column */}
-      <div className="dashboard-column right-column">
+      <div className="dashboard-column">
            <div className="card-row"> 
         <AverageScoreCard activities={activities} />
-        <div className="streak-card">
+         
           <StreakCard streakValue={calculateStreak(activities.length)} />
         </div>
-        </div>
-        <div className="activity-table-container">
+       
           <ActivityTable
             activities={activities}
             onDeleteActivity={handleDeleteActivity}
           />
-        </div>
+         
       </div>
     </div>
   );

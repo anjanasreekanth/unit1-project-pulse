@@ -11,8 +11,8 @@ function ActivityTable({ activities, onDeleteActivity }) {
       <div className="table-footer">
         <div className="footer">
           <span className="pagination-text">
-            {" "}
-            Showing 1 to {activities.length} of {activities.length} activities
+            Showing {activities.length ? 1 : 0} to {activities.length} of{" "}
+            {activities.length} activities
           </span>
         </div>
         <div className="pagination-controls">
@@ -32,8 +32,8 @@ function ActivityTable({ activities, onDeleteActivity }) {
           <div className="col-type">Type</div>
           <div className="col-duration">Duration</div>
           <div className="col-score">score</div>
-          <div className="col-duration">water</div>
-          <div className="col-duration">sleep</div>
+          <div className="col-water">water</div>
+          <div className="col-sleep">sleep</div>
           <div className="col-actions">Actions</div>
         </div>
         {/* Rows*/}
@@ -42,15 +42,15 @@ function ActivityTable({ activities, onDeleteActivity }) {
         ) : (
           activities.map((activity) => (
             <div className="table-row " key={activity.id}>
-              <div lassName="col-date">{activity.date} </div>
+              <div className="col-date">{activity.date} </div>
               <div className="col-activity">{activity.activity} </div>
               <div className="col-type">{activity.activityType} </div>
 
               <div className="col-duration">{activity.duration} </div>
 
               <div className="col-score">{activity.score} </div>
-              <div className="col-duration">{activity.water} </div>
-              <div className="col-duration">{activity.sleep} </div>
+              <div className="col-water">{activity.water} </div>
+              <div className="col-sleep">{activity.sleep} </div>
               <div className="col-actions">
                 <button
                   className="btn edit-btn"

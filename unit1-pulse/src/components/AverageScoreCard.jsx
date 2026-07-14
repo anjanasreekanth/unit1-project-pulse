@@ -2,7 +2,7 @@ function AverageScoreCard({ activities }) {
   const max = 10; // max score possible
   const totalActivities = activities.length; // total activities
   const totalScore = activities.reduce(
-    (score, activity) => score + activity.score,
+    (sum, activity) => sum + activity.score,
     0,
   ); // function to calculate total score
 
@@ -18,31 +18,33 @@ function AverageScoreCard({ activities }) {
   return (
     //conditional rendering
     //if no activities then display a message
-    <>
+    <div className="card">
+      <div className="card-header">Average Score</div>
       {totalActivities === 0 ? (
-        <div className="card average-score">
-          <div>Average Score</div>
-          <p className="placedholertext">Log activities to see your score!</p>
-        </div>
+        <p className="placeholder-text">Log activities to see your score!</p>
       ) : (
-        <div className="card average-score">
-          <div className="card-header"> Average Score</div>
-          {/**value display  */}
-          <div className="score-value-container">
-            <div className="score-value">{averageScore}</div>
-            <div className="score-label">/ {max}</div>
+        <>
+          <div className="score-display">
+            <span className="score-value">{averageScore}</span>
+            <span className="score-max">/ {max}</span>
           </div>
-          {/**value display  */}
-          <div className="activity-graph-container">
+          <div className="progress-section">
+            <div className="progress-header">
+              <span>Performance</span>
+              <span>{progressPercentage} %</span>
+            </div>
             <div className="progress-bar">
-              {/* <div className="progress-label">Progress</div> */}
-              <div className="progress-value">{progressPercentage} %</div>
+              <div
+                className="progress-fill"
+                style={{
+                  width: `${progressPercentage}%`,
+                }}
+              />
             </div>
           </div>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 }
-
 export default AverageScoreCard;
