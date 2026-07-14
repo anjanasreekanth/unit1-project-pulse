@@ -26,7 +26,7 @@
   font-weight: 700;
   line-height: 1;
   color: #69dec4;
-  margin-top: 5rem;
+  margin-top: 0.5rem;
 }
 
 .streak-label {
@@ -37,7 +37,6 @@
   letter-spacing: 3px;
 }
 
- 
 .motivational-text {
   margin: 0;
   text-align: center;
