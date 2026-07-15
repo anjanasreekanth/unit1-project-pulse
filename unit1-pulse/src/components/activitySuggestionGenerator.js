@@ -6,7 +6,7 @@ const activitySuggestions = [
     type: "mindfulness",
     duration: 10,
     inspiration:
-      "A calm mind is a strong startTransition. Take ten quiet minutes for yourself.",
+      "A calm mind is a strong start. Take ten quiet minutes for yourself.",
   },
   {
     time: "short",

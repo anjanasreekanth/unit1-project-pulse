@@ -5,6 +5,7 @@ import DashboardPage from "./Pages/DasboardPage";
 import AboutPage from "./Pages/AboutPage";
 import MyPlanPage from "./Pages/MyPlanPage";
 import { useState } from "react";
+import HomePage from "./Pages/HomePage";
 function App() {
   const [activities, setActivities] = useState([
     {
@@ -69,6 +70,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
           <Route
             path="dashboard"
             element={

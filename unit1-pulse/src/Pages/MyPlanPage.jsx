@@ -40,8 +40,9 @@ function MyPlanPage({ activities, goal, onGoalChange, onAddActivity }) {
           onAddActivity={addSuggestedActivity}
           
         />
+         <DailyInspiration suggestion={suggestion} />
       </div>
-      <DailyInspiration suggestion={suggestion} />
+     
     </section>
   );
 }
