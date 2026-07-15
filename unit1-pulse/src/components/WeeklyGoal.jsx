@@ -1,7 +1,6 @@
 import Button from "./Button";
 
-function WeeklyGoal({ activitiesCompleted, weeklyGoal,  onGoalChange }) {
-  console.log({activitiesCompleted, weeklyGoal})
+function WeeklyGoal({ activitiesCompleted, weeklyGoal, onGoalChange }) {
   const progress = Math.min((activitiesCompleted / weeklyGoal) * 100, 100);
 
   const decreaseGoal = () => {
@@ -21,15 +20,16 @@ function WeeklyGoal({ activitiesCompleted, weeklyGoal,  onGoalChange }) {
             : "You are making great progress!"}
         </p>
       </div>
+       {/* progress percentage and progress bar */}
       <div className="goal-progress">
-        <h3>Progress to weekly Goal</h3>// progress percentage and progress bar
+        <h3>Progress to weekly Goal</h3>
         <p>
           {Math.round(progress)}% | {activitiesCompleted} / {weeklyGoal}{" "}
           completed
         </p>
-        <div className="plan-progress-bar">
+        {/* <div className="plan-progress-bar">
           <div style={{ width: `${progress}%` }} />
-        </div>
+        </div> */}
       </div>
       <div className="goal-setter">
         <h3> Set your goal for this week</h3>

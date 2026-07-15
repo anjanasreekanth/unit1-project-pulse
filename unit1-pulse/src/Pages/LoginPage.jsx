@@ -29,7 +29,7 @@ function LoginPage({ onLogin }) {
             onChange={(event) => setName(event.target.value)}
             placeholder="Enter your name"
             required
-          ></input>
+          />
           <label htmlFor="login-password">Password</label>
           <input
             id="login-password"
@@ -38,11 +38,11 @@ function LoginPage({ onLogin }) {
             onChange={(event) => setPassword(event.target.value)}
             placeholder="Enter any password"
             required
-          ></input>
+          />
           <Button type="submit">Login</Button>
         </form>
         <p className="note">
-          This is a demo login and any name and password will work{" "}
+          This is a demo login and any name and password will work
         </p>
       </section>
     </main>

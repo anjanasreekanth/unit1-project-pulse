@@ -4,7 +4,7 @@ function ActivityLogForm({ onAddActivity }) {
   const [formState, setFormState] = useState({
     date: "",
     activity: "",
-    activityType: "", // State key uses camelCase
+    activityType: "",
     duration: "",
     water: 0,
     sleep: 0,
@@ -26,7 +26,7 @@ function ActivityLogForm({ onAddActivity }) {
     });
   };
 
-  // 4.
+  // 4. handle input change event
   const handleChange = (e) => {
     const { id, value, type } = e.target;
     console.log({ id, value, type });
@@ -40,6 +40,7 @@ function ActivityLogForm({ onAddActivity }) {
       [id]: newValue,
     }));
   };
+  //date validator
   const today = new Date().toISOString().split("T")[0];
   return (
     <div className="activity-form-container">

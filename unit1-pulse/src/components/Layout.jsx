@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import NavBar from "./NavBar";
-function Layout() {
+function Layout({ userName }) {
   return (
     <div className="app-container">
       {/* The header scetion */}
@@ -11,6 +11,12 @@ function Layout() {
         </a>
         <div className="header-right">
           <NavBar />
+          <div className="user">
+            <span className="user-icon">
+              {userName.charAt(0).toUpperCase()}
+            </span>
+            <span className="user-name"> Welcome {userName.toUpperCase()}</span>
+          </div>
         </div>
       </header>
 
