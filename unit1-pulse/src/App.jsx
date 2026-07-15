@@ -1,9 +1,10 @@
 import "./App.css";
 import Layout from "./components/Layout";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import DashboardPage from "./Pages/DasboardPage";
 import AboutPage from "./Pages/AboutPage";
 import MyPlanPage from "./Pages/MyPlanPage";
+import LoginPage from "./Pages/LoginPage";
 import { useState } from "react";
 import HomePage from "./Pages/HomePage";
 function App() {
@@ -41,6 +42,8 @@ function App() {
     },
   ]);
   const [weeklyGoal, setWeeklyGoal] = useState(4);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("");
   //console.log(activities);
   // 2. event handler to manage add acitivity
   const handleAddActivity = (newActivity) => {
@@ -65,11 +68,24 @@ function App() {
     setActivities(updatedActivities);
     alert("Activity Deleted!");
   };
+  //login
 
+  const login = (name) => {
+    setIsLoggedIn(true);
+    setUserName(name);
+  };
+  if (!isLoggedIn) {
+    return (
+      <Routes>
+        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<LoginPage onLogin={login} />} />
+      </Routes>
+    );
+  }
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout userName={userName} />}>
           <Route index element={<HomePage />} />
           <Route
             path="dashboard"
