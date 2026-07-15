@@ -40,7 +40,7 @@ function ActivityLogForm({ onAddActivity }) {
       [id]: newValue,
     }));
   };
-
+  const today = new Date().toISOString().split("T")[0];
   return (
     <div className="activity-form-container">
       <h3 className="form-title">Activity Log Form</h3>
@@ -55,6 +55,7 @@ function ActivityLogForm({ onAddActivity }) {
             className="input-field"
             onChange={handleChange}
             required
+            max={today}
           />
         </div>
         {/* Field 2 -> Activity */}
