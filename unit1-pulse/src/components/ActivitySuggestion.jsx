@@ -1,13 +1,19 @@
 import { useState } from "react";
 import Button from "./Button";
 
-function ActivitySuggestion({ suggestion, onFindSuggestion }) {
+function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
   const [time, setTime] = useState("short");
   const [energy, setEnergy] = useState("low");
-
+  const [wasAdded, setAddActivty] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
+    setAddActivty(false);
     onFindSuggestion(time, energy);
+  };
+
+  const addActivity = () => {
+    onAddActivity();
+    setAddActivty(true);
   };
 
   return (
@@ -83,7 +89,14 @@ function ActivitySuggestion({ suggestion, onFindSuggestion }) {
               {suggestion.activity} for {suggestion.duration} minutes
             </strong>
           </div>
+          <Button onClick={addActivity}> Log Activity</Button>
         </div>
+      )}
+      {wasAdded && (
+        <p className="logged-message" role="status">
+          {" "}
+          Activity added!
+        </p>
       )}
     </section>
   );

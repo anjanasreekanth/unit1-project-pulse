@@ -29,6 +29,16 @@
   margin-top: 0.5rem;
 }
 
+.weekly-header {
+  font-size: 1rem;
+
+  line-height: 1;
+  color: #69dec4;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+
+  letter-spacing: 3px;
+}
 .streak-label {
   margin-top: 0.5rem;
   font-size: 1.3rem;

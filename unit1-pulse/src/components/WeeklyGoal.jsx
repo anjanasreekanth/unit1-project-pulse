@@ -1,6 +1,7 @@
 import Button from "./Button";
 
-function WeeklyGoal({ activitiesCompleted, weeklyGoal, onGoalChange }) {
+function WeeklyGoal({ activitiesCompleted, weeklyGoal,  onGoalChange }) {
+  console.log({activitiesCompleted, weeklyGoal})
   const progress = Math.min((activitiesCompleted / weeklyGoal) * 100, 100);
 
   const decreaseGoal = () => {
