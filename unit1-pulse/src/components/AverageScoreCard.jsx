@@ -15,14 +15,6 @@ function AverageScoreCard({ activities }) {
     totalActivities > 0
       ? Math.round((totalScore / maxScorePossible) * 100, 2)
       : 0;
-  console.log({
-    totalActivities,
-    totalScore,
-    maxScorePossible,
-    progressPercentage,
-    total: totalScore / maxScorePossible,
-  });
-
   return (
     //conditional rendering
     //if no activities then display a message

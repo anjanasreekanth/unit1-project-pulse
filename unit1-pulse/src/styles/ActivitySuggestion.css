@@ -72,7 +72,11 @@
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
+.suggestion-result button:disabled{
+  background: #9bb9b0;
+  cursor: not-allowed;
+}
+@media (max-width: 768px) {
   .suggestion-form {
     grid-template-columns: 1fr;
   }

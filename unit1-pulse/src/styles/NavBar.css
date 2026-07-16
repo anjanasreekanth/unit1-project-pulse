@@ -1,5 +1,6 @@
 .navigation-links {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
 }
@@ -22,7 +23,7 @@
   background: #167c62;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .navigation-links {
     width: 100%;
     justify-content: space-between;
@@ -30,6 +31,6 @@
   }
   .navigation-item {
     padding: 0.55rem 0.6rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }

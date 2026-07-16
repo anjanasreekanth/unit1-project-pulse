@@ -38,6 +38,7 @@
   font-size: 1.3rem;
 
   letter-spacing: 3px;
+   text-align: center;
 }
 .streak-label {
   margin-top: 0.5rem;
@@ -67,5 +68,11 @@
   }
   .streak-label {
     font-size: 1rem;
+  }
+  .weekly-header{
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: center;
   }
 }
