@@ -141,9 +141,7 @@
     overflow: visible;
     border: 0;
   }
-  .table-header {
-    display: none;
-  }
+
   .table-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -177,9 +175,12 @@
     width: 100%;
     min-height: 42px;
   }
+  .table-header {
+    display: none;
+  }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .table-row {
     grid-template-columns: 1fr;
   }

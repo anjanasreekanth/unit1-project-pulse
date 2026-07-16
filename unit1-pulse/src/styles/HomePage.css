@@ -99,3 +99,35 @@
 .home-list-card li {
   color: #167c62;
 }
+
+/* break point to change multi column layout to single column
+Tablet and smaller */
+@media (max-width: 768px) {
+  .home-page {
+    grid-template-columns: 1fr;
+  }
+  .home-content h1 {
+    font-size: 2.2rem;
+  }
+  .pulse-animation {
+    min-height: 220px;
+  }
+  .home-list-card {
+    padding: 20px;
+  }
+}
+
+/**mobile
+reduce padding/font-size and stack buttons
+**/
+@media (max-width: 480px) {
+  .home-links {
+    flex-direction: column;
+  }
+  .home-links {
+    text-align: center;
+  }
+  .home-list-card ul {
+    grid-template-columns: 1fr;
+  }
+}

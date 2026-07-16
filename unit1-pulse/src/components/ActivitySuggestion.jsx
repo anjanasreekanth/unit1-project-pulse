@@ -5,17 +5,17 @@ function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
   //setting the state
   const [time, setTime] = useState("short");
   const [energy, setEnergy] = useState("low");
-  const [wasAdded, setAddActivity] = useState(false);
+  const [wasAdded, setWasAdded] = useState(false);
   //handle submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    setAddActivity(false);
+    setWasAdded(false);
     onFindSuggestion(time, energy);
   };
 
   const addActivity = () => {
     onAddActivity();
-    setAddActivity(true);
+    setWasAdded(true);
   };
 
   return (
@@ -93,13 +93,14 @@ function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
               {suggestion.activity} for {suggestion.duration} minutes
             </strong>
           </div>
-          <Button onClick={addActivity}> Log Activity</Button>
+          <Button onClick={addActivity} disabled={wasAdded}>
+            {wasAdded ? "Activity Logged" : "Log Activity"}
+          </Button>
         </div>
       )}
       {/*display the Activity added message*/}
       {wasAdded && (
         <p className="logged-message" role="status">
-          {" "}
           Activity added!
         </p>
       )}

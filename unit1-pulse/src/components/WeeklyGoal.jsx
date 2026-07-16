@@ -1,6 +1,7 @@
 import Button from "./Button";
 
 function WeeklyGoal({ activitiesCompleted, weeklyGoal, onGoalChange }) {
+  //Limit progress to 100% when completed activities exceed the goal
   const progress = Math.min((activitiesCompleted / weeklyGoal) * 100, 100);
 
   const decreaseGoal = () => {
@@ -27,9 +28,6 @@ function WeeklyGoal({ activitiesCompleted, weeklyGoal, onGoalChange }) {
           {Math.round(progress)}% | {activitiesCompleted} / {weeklyGoal}{" "}
           completed
         </p>
-        {/* <div className="plan-progress-bar">
-          <div style={{ width: `${progress}%` }} />
-        </div> */}
       </div>
       <div className="goal-setter">
         <h3> Set your goal for this week</h3>

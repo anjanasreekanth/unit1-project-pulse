@@ -46,7 +46,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [message, setMessage] = useState("");
 
-  //auto clear message
+  //auto clear message after 2.5 seconds
   useEffect(() => {
     if (!message) return;
 
@@ -78,8 +78,6 @@ function App() {
     );
     setActivities(updatedActivities);
     setMessage("Activity deleted succesfully");
-
-    //alert("Activity Deleted!");
   };
   //login
 
