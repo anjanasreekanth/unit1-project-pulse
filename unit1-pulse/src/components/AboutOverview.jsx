@@ -3,7 +3,7 @@ const benefits = [
     {icon: "↗", title: "Analyze", text:"See your average score and weekly progress." },
     {icon: "*", title: "Improve", text:"Build consistent habits one day at a time." }
 ];
-
+//About us section for About page
 function AboutOverview(){
     return(
         <article className="about-card about-overview">

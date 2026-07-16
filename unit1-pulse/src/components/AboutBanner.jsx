@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-
+//banner created for about page
 function AboutBanner(){
     return(
         <section className="about-banner">
