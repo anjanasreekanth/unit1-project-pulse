@@ -22,6 +22,16 @@
   box-shadow: 0 6px 20px rgba(35, 100, 80, 0.1);
 }
 
+.activity-message{
+  margin: 0 0 16px;
+  padding: 12px;
+  border: 1px solid #b8dfd2;
+  border-radius: 8px;
+  background: #e3f5ee;
+  color: #126c55;
+  font-weight: bold;
+}
+
 @media (max-width: 1000px) {
   .dashboard-grid {
     grid-template-columns: 1fr;

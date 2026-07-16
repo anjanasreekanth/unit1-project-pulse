@@ -7,13 +7,10 @@ function AverageScoreCard({ activities }) {
   ); // function to calculate total score
 
   //average score
-  const averageScore = Math.round(totalScore / totalActivities, 2) || 7.5;
+  const averageScore = totalActivities > 0 ? (totalScore / totalActivities).toFixed(1) : 0;
   const maxScorePossible = totalActivities * max; // maximum score possible
   //calculate progress percentage., math.round to limit to 2 decimal
-  const progressPercentage = Math.round(
-    (totalScore / maxScorePossible) * 100,
-    2,
-  );
+  const progressPercentage = totalActivities > 0 ? (Math.round(totalScore / maxScorePossible) * 100) : 0;
 
   return (
     //conditional rendering

@@ -6,9 +6,9 @@ function Layout({ userName }) {
     <div className="app-container">
       {/* The header scetion */}
       <header className="app-header">
-        <a href="/dashboard" className="logo">
-          <img src="/logo.svg" alt="Pulse" />
-        </a>
+     {/* <a href="/dashboard" className="logo"> */}
+          <img src="/logo.svg" alt="Pulse"  className="logo"/>
+        {/* </a> */}
         <div className="header-right">
           <NavBar />
           <div className="user">

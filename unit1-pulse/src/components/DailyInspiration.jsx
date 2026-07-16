@@ -1,10 +1,10 @@
 import { getInspirationResources } from "./inspirationGenerator";
 function DailyInspiration({ suggestion }) {
-  console.log(suggestion);
+  
   const resources = suggestion
     ? getInspirationResources(suggestion.activity)
     : [];
-  console.log(resources);
+  
   return (
     <section className="plan-card inspiration-section">
       <h2>Daily Inspiration</h2>
@@ -12,7 +12,7 @@ function DailyInspiration({ suggestion }) {
         <>
           <div className="inspiration-content">
             <div className="inspiration-icon">*</div>
-            <p className="insipration-activity">
+            <p className="inspiration-activity">
               Today's Activity: {suggestion.activity}
             </p>
             <blockquote>{suggestion.inspiration}</blockquote>
@@ -21,8 +21,8 @@ function DailyInspiration({ suggestion }) {
             </p>
           </div>
           <div className="resource-list">
-            {resources.map((resource, index) => (
-              <article className="resource-card" key={index}>
+            {resources.map((resource) => (
+              <article className="resource-card" key={resource.title}>
                 <span className="resource-type">{resource.type}</span>
                 <h3> {resource.title} </h3>
                 <p> {resource.description}</p>

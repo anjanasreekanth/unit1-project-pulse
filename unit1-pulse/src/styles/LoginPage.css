@@ -24,7 +24,7 @@
 .login-label {
   margin: 0;
   color: #167c62;
-  font-size: 0 0.75rem;
+  font-size: 0.75rem;
   font-weight: bold;
   letter-spacing: 2px;
   text-align: center;
@@ -44,7 +44,7 @@
 
 .login-form {
   display: flex;
-  flex-direction: columns;
+  flex-direction: column;
 }
 
 .login-form label {
@@ -55,6 +55,7 @@
 }
 
 .login-form input {
+  width: 100%;
   padding: 12px;
   border: 1px solid #167c62;
   border-radius: 8px;
