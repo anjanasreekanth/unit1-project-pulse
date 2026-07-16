@@ -1,8 +1,6 @@
 import { getRandomQuote } from "./randomQuoteGenerator";
 function StreakCard({ streakValue = 14, currentDays = 5, weeklyGoal = 7 }) {
   const quote = getRandomQuote();
-
-  console.log(currentDays, weeklyGoal);
   return (
     <div className="streak-card">
       <div className="streak-header">

@@ -68,6 +68,5 @@ const resources = [
 ];
 
 export const getInspirationResources = (activity) => {
-  console.log(activity);
   return resources.filter((resource) => resource.activity === activity);
 };
