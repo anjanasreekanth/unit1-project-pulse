@@ -1,10 +1,11 @@
 import "./App.css";
 import Layout from "./components/Layout";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import DashboardPage from "./Pages/DasboardPage";
 import AboutPage from "./Pages/AboutPage";
 import MyPlanPage from "./Pages/MyPlanPage";
-import { useState } from "react";
+import LoginPage from "./Pages/LoginPage";
+import { useEffect, useState } from "react";
 import HomePage from "./Pages/HomePage";
 function App() {
   const [activities, setActivities] = useState([
@@ -41,19 +42,32 @@ function App() {
     },
   ]);
   const [weeklyGoal, setWeeklyGoal] = useState(4);
-  //console.log(activities);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [message, setMessage] = useState("");
+
+  //auto clear message
+  useEffect(() => {
+    if (!message) return;
+
+    setTimeout(() => {
+      setMessage("");
+    }, 2500);
+  }, [message]);
   // 2. event handler to manage add acitivity
   const handleAddActivity = (newActivity) => {
     // add new activity with id
     const newActivityData = {
       ...newActivity,
       id: Date.now(), // generating dynamic id
-      score: Math.floor(Math.random() * 10) + 5, // mock score generateor
+      score: Math.floor(Math.random() * 6) + 5, // mock score generateor(5 to 10)
     };
 
     // update the state
-    setActivities([...activities, newActivityData]);
-    alert("Activity Log Added!");
+    setActivities((prev) => [...prev, newActivityData]);
+    setMessage("Activity added succesfully");
+
+    //alert("Activity Log Added!");
   };
 
   //3. delete activity handler
@@ -63,13 +77,28 @@ function App() {
       (activity) => activity.id !== idToDelete,
     );
     setActivities(updatedActivities);
-    alert("Activity Deleted!");
-  };
+    setMessage("Activity deleted succesfully");
 
+    //alert("Activity Deleted!");
+  };
+  //login
+
+  const login = (name) => {
+    setIsLoggedIn(true);
+    setUserName(name);
+  };
+  if (!isLoggedIn) {
+    return (
+      <Routes>
+        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<LoginPage onLogin={login} />} />
+      </Routes>
+    );
+  }
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout userName={userName} />}>
           <Route index element={<HomePage />} />
           <Route
             path="dashboard"
@@ -79,6 +108,7 @@ function App() {
                 weeklyGoal={weeklyGoal}
                 onAddActivity={handleAddActivity}
                 onDeleteActivity={handleDeleteActivity}
+                message={message}
               />
             }
           />

@@ -14,7 +14,7 @@ function MyPlanPage({ activities, goal, onGoalChange, onAddActivity }) {
     if (!suggestion) return;
 
     onAddActivity({
-      date: new Date().toDateString(),
+      date: new Date().toDateString().slice(0,10),
       activity: suggestion.activity,
       duration: suggestion.duration,
       activityType: suggestion.type,

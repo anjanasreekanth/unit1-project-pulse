@@ -6,9 +6,9 @@ import { getRandomQuote } from "./randomQouteGeneraor";
 function StreakCard({ streakValue = 14, currentDays = 5, weeklyGoal = 7 }) {
   //random quote - will move ot API
   const quote = getRandomQuote();
-  const progress = Math.round(currentDays / weeklyGoal);
+  //const progress = Math.round(currentDays / weeklyGoal);
   // const progressPercent = Math.min(progress / 100, 100);
-console.log(currentDays, weeklyGoal)
+  console.log(currentDays, weeklyGoal);
   return (
     <div className="streak-card">
       <div className="streak-header">
@@ -22,8 +22,11 @@ console.log(currentDays, weeklyGoal)
       {/* Progress bar */}
       <div className="progress-section">
         <div className="weekly-header">
-          <span> weekly goal Completed</span>
-          <span> {currentDays} of {weeklyGoal}</span>
+          <span> weekly goal Completed </span>
+          <span>
+            
+            {currentDays} of {weeklyGoal}
+          </span>
         </div>
       </div>
       {/* <div className="progress-bar">

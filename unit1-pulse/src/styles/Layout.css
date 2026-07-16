@@ -26,6 +26,27 @@
   align-items: center;
   gap: 20px;
 }
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.user-icon {
+  display: grid;
+  height: 34px;
+  width: 34px;
+  place-items: center;
+  color: #167c62;
+  background: #dff4ed;
+  font-weight: bold;
+  border-radius: 50%;
+}
+.user-name {
+  max-width: 170px;
+  color: #38564d;
+  font-weight: bold;
+  white-space: nowrap;
+}
 .main-content-area {
   flex: 1;
   padding: clamp(1rem, 3vw, 2.5rem);

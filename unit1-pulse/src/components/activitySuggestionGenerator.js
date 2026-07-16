@@ -40,7 +40,7 @@ const activitySuggestions = [
     activity: "Walking",
     type: "Cardio",
     duration: 60,
-    inspiration: "A longer walk is a simlple way to care for your body today.",
+    inspiration: "A longer walk is a simple way to care for your body today.",
   },
   {
     time: "long",

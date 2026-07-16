@@ -15,13 +15,13 @@ function ActivityTable({ activities, onDeleteActivity }) {
             {activities.length} activities
           </span>
         </div>
-        <div className="pagination-controls">
+        {/* <div className="pagination-controls">
           <button> &lt;&lt; </button>
           {activities.map((activities, index) => (
             <button key={index}>{index + 1} </button>
           ))}
           <button> &gt;&gt; </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="activity-table">
@@ -42,22 +42,36 @@ function ActivityTable({ activities, onDeleteActivity }) {
         ) : (
           activities.map((activity) => (
             <div className="table-row " key={activity.id}>
-              <div className="col-date" data-label="Date">{activity.date} </div>
-              <div className="col-activity" data-label="Activity">{activity.activity} </div>
-              <div className="col-type" data-label="Type">{activity.activityType} </div>
+              <div className="col-date" data-label="Date">
+                {activity.date}{" "}
+              </div>
+              <div className="col-activity" data-label="Activity">
+                {activity.activity}{" "}
+              </div>
+              <div className="col-type" data-label="Type">
+                {activity.activityType}{" "}
+              </div>
 
-              <div className="col-duration" data-label="Duration">{activity.duration} </div>
+              <div className="col-duration" data-label="Duration">
+                {activity.duration}{" "}
+              </div>
 
-              <div className="col-score" data-label="Score">{activity.score} </div>
-              <div className="col-water" data-label="Water">{activity.water} ml</div>
-              <div className="col-sleep" data-label="Sleep">{activity.sleep} hrs</div>
+              <div className="col-score" data-label="Score">
+                {activity.score}{" "}
+              </div>
+              <div className="col-water" data-label="Water">
+                {activity.water} ml
+              </div>
+              <div className="col-sleep" data-label="Sleep">
+                {activity.sleep} hrs
+              </div>
               <div className="col-actions" data-label="Actions">
-                <button
+                {/* <button
                   className="btn edit-btn"
                   onClick={() => console.log(`Editing ${activity.id}`)}
                 >
                   Edit
-                </button>
+                </button> */}
                 <button
                   className="btn delete-btn"
                   onClick={() => onDeleteActivity(activity.id)}
