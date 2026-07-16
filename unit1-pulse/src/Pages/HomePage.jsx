@@ -5,7 +5,7 @@ function HomePage() {
     "Log your daily activities",
     "Track sleep and water intake",
     "View your average score",
-    "Bild Healthy Habits",
+    "Build Healthy Habits",
   ];
 
   return (
@@ -15,7 +15,7 @@ function HomePage() {
         <h1>Track your activities, one day at a time</h1>
         <p className="home-description">
           Pulse is a simple wellness tracker that help you track activities and
-          udnerstand your daily habits
+          understand your daily habits
         </p>
         <div className="home-links">
           <Link className="home-primary-link" to="/dashboard">

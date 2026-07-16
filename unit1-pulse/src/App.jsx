@@ -1,7 +1,7 @@
 import "./App.css";
 import Layout from "./components/Layout";
 import { Navigate, Route, Routes } from "react-router-dom";
-import DashboardPage from "./Pages/DasboardPage";
+import DashboardPage from "./Pages/DashboardPage";
 import AboutPage from "./Pages/AboutPage";
 import MyPlanPage from "./Pages/MyPlanPage";
 import LoginPage from "./Pages/LoginPage";

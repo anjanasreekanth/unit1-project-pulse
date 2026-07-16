@@ -20,7 +20,7 @@ function WeeklyGoal({ activitiesCompleted, weeklyGoal, onGoalChange }) {
             : "You are making great progress!"}
         </p>
       </div>
-       {/* progress percentage and progress bar */}
+      {/* progress percentage and progress bar */}
       <div className="goal-progress">
         <h3>Progress to weekly Goal</h3>
         <p>

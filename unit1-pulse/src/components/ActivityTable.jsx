@@ -1,11 +1,4 @@
 function ActivityTable({ activities, onDeleteActivity }) {
-  //  id: 1,
-  //     date: "2026-06-20",
-  //     activity: "Running",
-  //     duration: "1 hour",
-  //     score: 8,
-  //     water: 2500,
-  //     sleep: 7,
   return (
     <div className="activity-table-container">
       <div className="table-footer">
@@ -15,13 +8,6 @@ function ActivityTable({ activities, onDeleteActivity }) {
             {activities.length} activities
           </span>
         </div>
-        {/* <div className="pagination-controls">
-          <button> &lt;&lt; </button>
-          {activities.map((activities, index) => (
-            <button key={index}>{index + 1} </button>
-          ))}
-          <button> &gt;&gt; </button>
-        </div> */}
       </div>
 
       <div className="activity-table">
@@ -66,12 +52,6 @@ function ActivityTable({ activities, onDeleteActivity }) {
                 {activity.sleep} hrs
               </div>
               <div className="col-actions" data-label="Actions">
-                {/* <button
-                  className="btn edit-btn"
-                  onClick={() => console.log(`Editing ${activity.id}`)}
-                >
-                  Edit
-                </button> */}
                 <button
                   className="btn delete-btn"
                   onClick={() => onDeleteActivity(activity.id)}

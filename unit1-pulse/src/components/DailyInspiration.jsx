@@ -1,10 +1,9 @@
 import { getInspirationResources } from "./inspirationGenerator";
 function DailyInspiration({ suggestion }) {
-  
   const resources = suggestion
     ? getInspirationResources(suggestion.activity)
     : [];
-  
+
   return (
     <section className="plan-card inspiration-section">
       <h2>Daily Inspiration</h2>
@@ -34,7 +33,9 @@ function DailyInspiration({ suggestion }) {
           </div>
         </>
       ) : (
-        <p className="empty" >Choose your time and energy level for suggestion</p>
+        <p className="empty">
+          Choose your time and energy level for suggestion
+        </p>
       )}
     </section>
   );

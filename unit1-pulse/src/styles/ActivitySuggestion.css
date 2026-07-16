@@ -76,10 +76,10 @@
   .suggestion-form {
     grid-template-columns: 1fr;
   }
-  .find-button{
+  .find-button {
     grid-column: auto;
   }
-  .suggestion-result{
+  .suggestion-result {
     align-items: stretch;
     flex-direction: column;
   }

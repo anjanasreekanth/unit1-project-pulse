@@ -2,18 +2,20 @@ import { useState } from "react";
 import Button from "./Button";
 
 function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
+  //setting the state
   const [time, setTime] = useState("short");
   const [energy, setEnergy] = useState("low");
-  const [wasAdded, setAddActivty] = useState(false);
+  const [wasAdded, setAddActivity] = useState(false);
+  //handle submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    setAddActivty(false);
+    setAddActivity(false);
     onFindSuggestion(time, energy);
   };
 
   const addActivity = () => {
     onAddActivity();
-    setAddActivty(true);
+    setAddActivity(true);
   };
 
   return (
@@ -81,6 +83,8 @@ function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
           Get suggestion
         </Button>
       </form>
+
+      {/*display the recommendation after user click in Get Suggestion button*/}
       {suggestion && (
         <div className="suggestion-result">
           <div>
@@ -92,6 +96,7 @@ function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
           <Button onClick={addActivity}> Log Activity</Button>
         </div>
       )}
+      {/*display the Activity added message*/}
       {wasAdded && (
         <p className="logged-message" role="status">
           {" "}

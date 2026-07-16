@@ -47,7 +47,6 @@ function ContactForm() {
           value={formValues.email}
           onChange={handleChange}
           required
-
         />
 
         <label htmlFor="contact-message">Message</label>
