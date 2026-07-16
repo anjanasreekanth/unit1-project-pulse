@@ -14,7 +14,7 @@ function LoginPage({ onLogin }) {
   return (
     <main className="login-page">
       <section className="login-card">
-        <img className="login-logo" src="/logo.svg" alt="Pulse"/>
+        <img className="login-logo" src="/logo.svg" alt="Pulse" />
         <p className="login-label">LOGIN</p>
         <h1>Welcome to pulse</h1>
         <p className="login-description">
@@ -43,7 +43,8 @@ function LoginPage({ onLogin }) {
           <Button type="submit">Login</Button>
         </form>
         <p className="note">
-          This is a demo login, Enter any name and a password with atleast 3 characters
+          This is a demo login, Enter any name and a password with atleast 3
+          characters
         </p>
       </section>
     </main>

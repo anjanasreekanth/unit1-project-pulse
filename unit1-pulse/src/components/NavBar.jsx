@@ -8,7 +8,9 @@ function NavBar() {
       <Link
         className={`navigation-item ${currentPath === "/" ? "active-link" : ""}`}
         to="/"
-      >Home</Link>
+      >
+        Home
+      </Link>
       <Link
         className={`navigation-item ${currentPath === "/dashboard" ? "active-link" : ""}`}
         to="/dashboard"

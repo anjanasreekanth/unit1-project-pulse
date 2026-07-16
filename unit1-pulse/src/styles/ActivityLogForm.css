@@ -17,16 +17,16 @@
 }
 
 .input-field {
- width: 100%;
- min-height: 44px;
- padding: .45rem .65rem;
- border: 1px solid #cddbd6;
- border-radius: 8px;
- background: white;
- color: #263238;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #cddbd6;
+  border-radius: 8px;
+  background: white;
+  color: #263238;
 }
 
-.input-field:focus{
+.input-field:focus {
   border-color: #167c62;
 }
 

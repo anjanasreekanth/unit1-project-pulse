@@ -33,7 +33,7 @@ const resources = [
     type: "Plan",
     title: "Couch to 5k",
     description: "Follow a simple nine-week running plan for beginners.",
-    link: "https://www.youtube.com/results?search_query=NHS+walking+for+health",
+    link: "https://www.nhs.uk/live-well/exercise/get-running-with-couch-to-5k/",
   },
 
   {

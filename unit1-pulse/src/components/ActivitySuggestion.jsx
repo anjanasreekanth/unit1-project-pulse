@@ -5,17 +5,17 @@ function ActivitySuggestion({ suggestion, onFindSuggestion, onAddActivity }) {
   //setting the state
   const [time, setTime] = useState("short");
   const [energy, setEnergy] = useState("low");
-  const [wasAdded, setAddActivty] = useState(false);
+  const [wasAdded, setAddActivity] = useState(false);
   //handle submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    setAddActivty(false);
+    setAddActivity(false);
     onFindSuggestion(time, energy);
   };
 
   const addActivity = () => {
     onAddActivity();
-    setAddActivty(true);
+    setAddActivity(true);
   };
 
   return (

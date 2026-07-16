@@ -54,6 +54,6 @@ const activitySuggestions = [
 ];
 export const getActivitySuggestion = (time, energy) => {
   return activitySuggestions.find(
-    (item) => item.time === time && item.energy === energy
+    (item) => item.time === time && item.energy === energy,
   );
 };
