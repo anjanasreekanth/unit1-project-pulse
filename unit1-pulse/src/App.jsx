@@ -123,6 +123,8 @@ function App() {
             }
           />
         </Route>
+        <Route path="/login" element={<LoginPage onLogin={login} />} />
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </>
   );

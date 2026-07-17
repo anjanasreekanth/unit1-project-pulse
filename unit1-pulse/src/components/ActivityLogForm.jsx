@@ -29,8 +29,6 @@ function ActivityLogForm({ onAddActivity }) {
   // 4. handle input change event
   const handleChange = (e) => {
     const { id, value, type } = e.target;
-    console.log({ id, value, type });
-
     let newValue = value;
     if (type === "number") {
       newValue = value === "" ? 0 : parseFloat(value) || 0;
