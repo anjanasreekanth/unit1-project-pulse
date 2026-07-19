@@ -65,7 +65,7 @@ function App() {
 
     // update the state
     setActivities((prev) => [...prev, newActivityData]);
-    setMessage("Activity added succesfully");
+    setMessage("Activity added successfully");
 
     //alert("Activity Log Added!");
   };
@@ -77,7 +77,7 @@ function App() {
       (activity) => activity.id !== idToDelete,
     );
     setActivities(updatedActivities);
-    setMessage("Activity deleted succesfully");
+    setMessage("Activity deleted successfully");
   };
   //login
 
