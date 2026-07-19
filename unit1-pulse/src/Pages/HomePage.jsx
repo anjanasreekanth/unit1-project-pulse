@@ -14,7 +14,7 @@ function HomePage() {
         <p className="home-label">WELCOME TO PULSE</p>
         <h1>Track your activities, one day at a time</h1>
         <p className="home-description">
-          Pulse is a simple wellness tracker that help you track activities and
+          Pulse is a simple wellness tracker that helps you track activities and
           understand your daily habits
         </p>
         <div className="home-links">
